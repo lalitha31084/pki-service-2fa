@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+venv/
+.env
+.DS_Store
+encrypted_seed.txt
+decrypted_seed.txt
+cron_logs/

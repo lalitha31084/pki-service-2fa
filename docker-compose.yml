@@ -1,0 +1,20 @@
+services:
+  app:
+    build: .
+    container_name: pki_2fa_service
+    ports:
+      - "8080:8080"
+    volumes:
+      # Named volumes for persistence (as required)
+      - seed_data:/data
+      - cron_output:/cron
+      # Bind mount the private key (Read-Only) so the app can use it
+      - ./student_private.pem:/app/student_private.pem:ro
+    environment:
+      - TZ=UTC
+      - SEED_PATH=/data/seed.txt
+    restart: unless-stopped
+
+volumes:
+  seed_data:
+  cron_output:
