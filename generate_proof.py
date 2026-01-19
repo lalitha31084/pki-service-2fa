@@ -67,7 +67,6 @@ def generate_proof():
     print(f"1. GitHub Repo URL:      https://github.com/lalitha31084/pki-service-2fa.git")
     print(f"2. Commit Hash:          {commit_hash}")
     print(f"3. Encrypted Signature:  {final_proof}")
-    print("\n(Copy the Encrypted Signature exactly as one long line)")
 
 if __name__ == "__main__":
     generate_proof()
